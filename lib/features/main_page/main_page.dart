@@ -12,7 +12,7 @@ class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    const Center(child: Text('Wishlist')),
+    const Center(child: Text('home')),
     const Center(child: Text('Wishlist')),
     const Center(child: Text('Wishlist')),
     const Center(child: Text('Wishlist')),
