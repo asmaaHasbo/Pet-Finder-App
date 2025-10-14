@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_finder_app/features/onboarding/onboarding_screen.dart';
 
 class PetFinderApp extends StatelessWidget {
   const PetFinderApp({super.key});
@@ -22,7 +23,7 @@ class PetFinderApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         // initialRoute: Routes.mainScreen,
         // onGenerateRoute: appRouter.generateRoute,
-        // home:,
+        home: const OnboardingScreen() ,
       ),
     );
   }
