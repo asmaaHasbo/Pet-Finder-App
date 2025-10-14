@@ -16,7 +16,7 @@ class GetStartedBtn extends StatelessWidget {
       btnName: 'Get Started',
       height: 54.h,
       width: 297.w,
-      icon: Icons.android_outlined,
+      icon: Icons.pets,
       raduis: 30,
     );
   }
