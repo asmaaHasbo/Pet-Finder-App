@@ -1,28 +1,25 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/core/themes/app_colors.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-     const Center(child: Text('Wishlist')),
-     const Center(child: Text('Wishlist')),
-     const Center(child: Text('Wishlist')),
-     const Center(child: Text('Wishlist')),
+    const Center(child: Text('Wishlist')),
+    const Center(child: Text('Wishlist')),
+    const Center(child: Text('Wishlist')),
+    const Center(child: Text('Wishlist')),
   ];
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: _screens[_currentIndex],
       bottomNavigationBar: _buildBottomNavigationBar(),
@@ -43,9 +40,9 @@ class _MainScreenState extends State<MainScreen> {
       ),
       child: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 16.w),
+          padding: const EdgeInsets.all(20),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               _buildNavItem(
                 index: 0,
@@ -89,14 +86,10 @@ class _MainScreenState extends State<MainScreen> {
       },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        padding: EdgeInsets.symmetric(
-          horizontal: (isActive ? 16 : 12),
-          vertical: 8,
-        ),
 
         child: Icon(
           isActive ? activeIcon : icon,
-          color: isActive ? Colors.transparent : AppColors.gray,
+          color: isActive ? AppColors.mainColor : AppColors.gray,
           size: 24,
         ),
       ),
@@ -137,4 +130,3 @@ class _MainScreenState extends State<MainScreen> {
 //     );
 //   }
 // }
-
