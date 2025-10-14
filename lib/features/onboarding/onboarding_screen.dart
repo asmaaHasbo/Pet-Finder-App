@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/features/onboarding/widgets/onboarding_container.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -18,8 +19,7 @@ class OnboardingScreen extends StatelessWidget {
                 'assets/images/on_boarding_bg.png',
                 fit: BoxFit.cover,
               ),
-
-              // الـ Container الأبيض تحت
+              SizedBox(height: 30.h),
               const OnboardingContainer(),
             ],
           ),

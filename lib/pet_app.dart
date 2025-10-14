@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_finder_app/core/routing/routes.dart';
 import 'package:pet_finder_app/features/onboarding/onboarding_screen.dart';
 
 class PetFinderApp extends StatelessWidget {
@@ -21,7 +22,7 @@ class PetFinderApp extends StatelessWidget {
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
-        // initialRoute: Routes.mainScreen,
+        initialRoute: Routes.onboardingScreen,
         // onGenerateRoute: appRouter.generateRoute,
         home: const OnboardingScreen() ,
       ),

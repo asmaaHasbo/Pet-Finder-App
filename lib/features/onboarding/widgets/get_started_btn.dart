@@ -9,7 +9,9 @@ class GetStartedBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomElevatedBtn(
-      onPressed: () {},
+      onPressed: () {
+        
+      },
       backgroundColor: AppColors.mainColor,
       btnName: 'Get Started',
       height: 54.h,
