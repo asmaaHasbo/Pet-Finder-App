@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_finder_app/core/themes/app_colors.dart';
+import 'package:pet_finder_app/features/home/ui/home_screen.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -12,7 +13,7 @@ class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    const Center(child: Text('Wishlist')),
+  const HomeScreen(),
     const Center(child: Text('Wishlist')),
     const Center(child: Text('Wishlist')),
     const Center(child: Text('Wishlist')),
