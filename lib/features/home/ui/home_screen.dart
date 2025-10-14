@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/core/themes/app_styles.dart';
+import 'package:pet_finder_app/features/home/ui/widgets/category_list.dart';
 import 'package:pet_finder_app/features/home/ui/widgets/home_search.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  String selectedCategory = 'all';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +39,20 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(16.0.w),
-          child: const Column(children: [HomeSearch()]),
+          child: Column(
+            children: [
+              const HomeSearch(),
+
+              CategoriesList(
+                selectedCategory: selectedCategory,
+                onCategorySelected: (category) {
+                  setState(() {
+                    selectedCategory = category;
+                  });
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
