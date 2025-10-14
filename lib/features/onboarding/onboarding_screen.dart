@@ -19,7 +19,7 @@ class OnboardingScreen extends StatelessWidget {
                 'assets/images/on_boarding_bg.png',
                 fit: BoxFit.cover,
               ),
-              SizedBox(height: 30.h),
+              SizedBox(height: 70.h),
               const OnboardingContainer(),
             ],
           ),

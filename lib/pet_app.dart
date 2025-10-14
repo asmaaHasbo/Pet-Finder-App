@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_finder_app/core/routing/app_router.dart';
 import 'package:pet_finder_app/core/routing/routes.dart';
 import 'package:pet_finder_app/features/onboarding/onboarding_screen.dart';
 
@@ -9,7 +10,7 @@ class PetFinderApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final AppRouter appRouter = AppRouter();
+    final AppRouter appRouter = AppRouter();
 
     return ScreenUtilInit(
       designSize: const Size(375, 812),
@@ -18,12 +19,12 @@ class PetFinderApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Pet Finder App',
         theme: ThemeData(
-          textTheme: GoogleFonts.cairoTextTheme(),
+          textTheme: GoogleFonts.poppinsTextTheme(),
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.onboardingScreen,
-        // onGenerateRoute: appRouter.generateRoute,
+        onGenerateRoute: appRouter.generateRoute,
         home: const OnboardingScreen() ,
       ),
     );
