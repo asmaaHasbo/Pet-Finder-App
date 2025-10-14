@@ -10,10 +10,9 @@ class PetImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100.w,
-      height: 100.h,
-      margin: EdgeInsets.all(10.w),
-      padding: EdgeInsets.all(5.w),
+      width: 110.w,
+      height: 110.h,
+      padding: EdgeInsets.all(10.w),
       decoration: BoxDecoration(
         color: AppColors.mintGreen,
         borderRadius: BorderRadius.circular(12.r),
