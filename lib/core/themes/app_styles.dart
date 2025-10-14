@@ -15,7 +15,7 @@ class AppTextStyles {
     color: AppColors.gray,
   );
 
-  static TextStyle font18W500lightGray = TextStyle(
+  static TextStyle font18W500white = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w500,
     color: Colors.white,
