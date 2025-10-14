@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_finder_app/core/themes/app_colors.dart';
+import 'package:pet_finder_app/features/home/ui/home_screen.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
