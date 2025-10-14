@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/core/themes/app_styles.dart';
 import 'package:pet_finder_app/features/home/ui/widgets/category_list.dart';
-import 'package:pet_finder_app/features/home/ui/widgets/home_search.dart';
+import 'package:pet_finder_app/features/home/ui/widgets/pet_list.dart';
+import 'package:pet_finder_app/features/home/ui/widgets/search_row.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -41,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.all(16.0.w),
           child: Column(
             children: [
-              const HomeSearch(),
+              const SearchRow(),
 
               CategoriesList(
                 selectedCategory: selectedCategory,
@@ -51,6 +52,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   });
                 },
               ),
+
+              SizedBox(height: 20.h),
+
+              const Expanded(child: PetList()),
             ],
           ),
         ),

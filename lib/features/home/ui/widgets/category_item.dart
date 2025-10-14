@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pet_finder_app/core/themes/app_colors.dart';
 import 'package:pet_finder_app/core/themes/app_styles.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -23,13 +24,13 @@ class CategoryItem extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFF4ECDC4) : const Color(0xFFE0F7F6),
+          color: isSelected ? const Color(0xFF4ECDC4) : AppColors.mintGreen,
           borderRadius: BorderRadius.circular(24.r),
         ),
         child: Text(
           label,
           style: AppTextStyles.font14W600mainColor.copyWith(
-            color: isSelected ? Colors.white : const Color(0xFF4ECDC4),
+            color: isSelected ? Colors.white : AppColors.mainColor,
           ),
         ),
       ),

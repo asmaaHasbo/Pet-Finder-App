@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/core/themes/app_styles.dart';
 
-class HomeSearch extends StatelessWidget {
-  const HomeSearch({super.key});
+class SearchRow extends StatelessWidget {
+  const SearchRow({super.key});
 
   @override
   Widget build(BuildContext context) {
