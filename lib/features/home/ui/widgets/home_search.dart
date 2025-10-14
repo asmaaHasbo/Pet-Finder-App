@@ -16,11 +16,7 @@ class HomeSearch extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(width: 16.w),
-          Icon(
-            Icons.search,
-            size: 24.sp,
-            color: const Color.fromARGB(255, 255, 253, 253),
-          ),
+          Icon(Icons.search, size: 24.sp),
           SizedBox(width: 12.w),
           const SearchTextField(),
           Icon(Icons.tune, size: 20.sp),
