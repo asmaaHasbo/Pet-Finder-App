@@ -15,7 +15,6 @@ class PetDetails extends StatelessWidget {
           children: [
             DetalisHeader(),
             PetImg(),
-
             Expanded(child: SingleChildScrollView(child: PetInfoContainer())),
           ],
         ),

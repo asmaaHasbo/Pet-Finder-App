@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/features/pet_details/ui/widgets/info_cards_row.dart';
+import 'package:pet_finder_app/features/pet_details/ui/widgets/pet_description.dart';
 import 'package:pet_finder_app/features/pet_details/ui/widgets/pet_name_price_location.dart';
 
 class PetInfoContainer extends StatelessWidget {
@@ -19,6 +20,7 @@ class PetInfoContainer extends StatelessWidget {
           SizedBox(height: 12.h),
           const InfoCardsRow(),
           SizedBox(height: 24.h),
+          const PetDescription(),
           // const DogAboutSection(),
           // SizedBox(height: 32.h),
           // const AdoptButton(),
