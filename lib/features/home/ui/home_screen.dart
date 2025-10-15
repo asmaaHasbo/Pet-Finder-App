@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(
           'Find Your Forever Pet',
           style: AppTextStyles.font24W700darkBlack,
@@ -37,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             width: 40.w,
             height: 40.h,
             decoration: BoxDecoration(
-              color: Colors.white,
+              // color: Colors.white,
               borderRadius: BorderRadius.circular(12.r),
             ),
             child: Icon(Icons.notifications_outlined, size: 24.sp),
@@ -50,7 +51,6 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.all(16.0.w),
           child: Column(
             children: [
-              
               const SearchRow(),
 
               CategoriesList(
@@ -63,7 +63,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               SizedBox(height: 20.h),
-
 
               const ListBlocBuilder(),
             ],
