@@ -5,12 +5,12 @@ import 'package:pet_finder_app/core/error/error_model.dart';
 
 ErrorModel handleDioException(DioException e) {
   final statusCode = e.response?.statusCode;
-  
+
   // Try to extract error message from response
   if (e.response?.data != null) {
     try {
       Map<String, dynamic> jsonData;
-      
+
       if (e.response!.data is String) {
         // If response is plain text and not JSON
         return ErrorModel(
@@ -21,7 +21,7 @@ ErrorModel handleDioException(DioException e) {
         // If response is JSON
         jsonData = e.response!.data as Map<String, dynamic>;
         final apiErrorModel = ApiErrorModel.fromJson(jsonData);
-        
+
         return ErrorModel(
           message: apiErrorModel.getAllErrorMessages(),
           statusCode: statusCode,
@@ -67,7 +67,7 @@ String _getDefaultErrorMessage(DioExceptionType type, {int? statusCode}) {
         return 'Server error (HTTP $statusCode). Please try again later.';
     }
   }
-  
+
   switch (type) {
     case DioExceptionType.connectionTimeout:
       return 'Connection timeout. Please check your internet connection.';

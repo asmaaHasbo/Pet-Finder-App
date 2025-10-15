@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pet_finder_app/core/di/di.dart';
 import 'package:pet_finder_app/core/themes/app_colors.dart';
+import 'package:pet_finder_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:pet_finder_app/features/home/ui/home_screen.dart';
 
 class MainPage extends StatefulWidget {
@@ -13,7 +16,11 @@ class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    const Center(child: Text('home')),
+    BlocProvider(
+      create: (context) => getIt<HomeCubit>(),
+      child: const HomeScreen(),
+    ),
+    // const HomeScreen(),
     const Center(child: Text('Wishlist')),
     const Center(child: Text('Wishlist')),
     const Center(child: Text('Wishlist')),

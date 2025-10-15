@@ -5,11 +5,7 @@ class ApiErrorModel {
   final dynamic errors;
   final Map<String, dynamic>? data;
 
-  ApiErrorModel({
-    this.message,
-    this.errors,
-    this.data,
-  });
+  ApiErrorModel({this.message, this.errors, this.data});
 
   factory ApiErrorModel.fromJson(Map<String, dynamic> json) {
     return ApiErrorModel(
@@ -49,8 +45,6 @@ class ApiErrorModel {
       }
     }
 
-    return messages.isEmpty 
-        ? 'An error occurred' 
-        : messages.join('\n');
+    return messages.isEmpty ? 'An error occurred' : messages.join('\n');
   }
 }
