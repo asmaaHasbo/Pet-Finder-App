@@ -6,6 +6,4 @@ class AppColors {
   static const gray = Color(0xff9F9F9F);
   static const secandaryColor = Color(0xffE1F8F9);
   static const mintGreen = Color(0xffE1F8F9);
-
-
 }
