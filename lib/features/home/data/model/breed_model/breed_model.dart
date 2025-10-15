@@ -80,9 +80,9 @@ class BreedModel {
   });
 
   factory BreedModel.fromJson(Map<String, dynamic> json) => BreedModel(
-    weight: json['weight'] == null
-        ? null
-        : Weight.fromJson(json['weight'] as Map<String, dynamic>),
+    // weight: json['weight'] == null
+    //     ? null
+    //     : Weight.fromJson(json['weight'] as Map<String, dynamic>),
     id: json['id'] as String?,
     name: json['name'] as String?,
     cfaUrl: json['cfa_url'] as String?,

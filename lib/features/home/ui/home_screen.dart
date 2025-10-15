@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/core/themes/app_styles.dart';
+import 'package:pet_finder_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:pet_finder_app/features/home/ui/widgets/category_list.dart';
-import 'package:pet_finder_app/features/home/ui/widgets/pet_list.dart';
+import 'package:pet_finder_app/features/home/ui/widgets/list_bloc_builder.dart';
 import 'package:pet_finder_app/features/home/ui/widgets/search_row.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,6 +15,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    BlocProvider.of<HomeCubit>(context).emitHomeBreedStates();
+  }
+
   String selectedCategory = 'all';
   @override
   Widget build(BuildContext context) {
@@ -42,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.all(16.0.w),
           child: Column(
             children: [
+              
               const SearchRow(),
 
               CategoriesList(
@@ -55,7 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
               SizedBox(height: 20.h),
 
-              const Expanded(child: PetList()),
+
+              const ListBlocBuilder(),
             ],
           ),
         ),

@@ -11,7 +11,7 @@ class HomeRepo {
   HomeApiService homeApiService;
   HomeRepo(this.homeApiService);
 
-  Future<ApiResult<BreedModel>> getBreeds() async {
+  Future<ApiResult<List<BreedModel>>> getBreeds() async {
     try {
       final response = await homeApiService.getBreeds();
       return ApiResult.success(response);

@@ -10,5 +10,5 @@ abstract class HomeApiService {
   factory HomeApiService(Dio dio) = _HomeApiService;
 
   @GET(ApiEndPoints.breeds)
-  Future<BreedModel> getBreeds();
+  Future<List<BreedModel>> getBreeds();
 }
