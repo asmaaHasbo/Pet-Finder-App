@@ -21,16 +21,20 @@ class PetImage extends StatelessWidget {
         color: AppColors.mintGreen,
         borderRadius: BorderRadius.circular(12.r),
       ),
-      child: Image.network(
-        imgUrl,
-        headers: const {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        },
-        fit: BoxFit.cover,
-        errorBuilder: (context, error, stackTrace) {
-          log('img error ${error.toString()}');
-          return const Center(child: Icon(Icons.pets, size: 40));
-        },
+      child: ClipRRect(
+        borderRadius: BorderRadiusGeometry.circular(10.r),
+        child: Image.network(
+          imgUrl,
+          headers: const {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+          },
+          width: double.infinity,
+          fit: BoxFit.cover,
+          errorBuilder: (context, error, stackTrace) {
+            log('img error ${error.toString()}');
+            return const Center(child: Icon(Icons.pets, size: 40));
+          },
+        ),
       ),
     );
   }
