@@ -8,7 +8,7 @@ class PetImg extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // margin: EdgeInsets.symmetric(horizontal: 16.w),
-      height: 280.h,
+      height: 350.h,
       decoration: BoxDecoration(
         color: const Color(0xFFD4E8EB),
         borderRadius: BorderRadius.circular(20.r),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pet_finder_app/core/themes/app_colors.dart';
 
 class DetalisHeader extends StatelessWidget {
   const DetalisHeader({super.key});
@@ -15,22 +16,11 @@ class DetalisHeader extends StatelessWidget {
             onTap: () => Navigator.pop(context),
             child: Icon(
               Icons.arrow_back_ios,
-              color: const Color(0xFF5FBDBD),
-              size: 24.sp,
+              color: AppColors.mainColor,
+              size: 30.sp,
             ),
           ),
-          Container(
-            padding: EdgeInsets.all(8.w),
-            decoration: BoxDecoration(
-              color: const Color(0xFF5FBDBD),
-              borderRadius: BorderRadius.circular(12.r),
-            ),
-            child: Icon(
-              Icons.favorite,
-              color: Colors.white,
-              size: 24.sp,
-            ),
-          ),
+          Icon(Icons.favorite, color: AppColors.mainColor, size: 30.sp),
         ],
       ),
     );

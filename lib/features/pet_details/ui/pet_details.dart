@@ -9,13 +9,20 @@ class PetDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color.fromARGB(255, 180, 236, 254),
+      // backgroundColor: Color.fromARGB(255, 180, 236, 254),
       body: SafeArea(
-        child: Column(
+        child: Stack(
           children: [
-            DetalisHeader(),
-            PetImg(),
-            Expanded(child: SingleChildScrollView(child: PetInfoContainer())),
+            Column(
+              children: [
+                PetImg(),
+                Expanded(
+                  child: SingleChildScrollView(child: PetInfoContainer()),
+                ),
+              ],
+            ),
+
+            Positioned(top: 0, right: 0, left: 0, child: DetalisHeader()),
           ],
         ),
       ),
