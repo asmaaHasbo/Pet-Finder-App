@@ -25,9 +25,7 @@ class PetImage extends StatelessWidget {
         borderRadius: BorderRadiusGeometry.circular(10.r),
         child: Image.network(
           imgUrl,
-          headers: const {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-          },
+          
           width: double.infinity,
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) {

@@ -12,7 +12,6 @@ class PetCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 120.h,
       padding: EdgeInsets.all(10.w),
       decoration: BoxDecoration(
         color: Colors.white,
