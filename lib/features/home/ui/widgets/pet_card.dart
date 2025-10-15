@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/core/themes/app_colors.dart';
+import 'package:pet_finder_app/features/home/data/model/breed_model/breed_model.dart';
 import 'package:pet_finder_app/features/home/ui/widgets/favorite_btn.dart';
 import 'package:pet_finder_app/features/home/ui/widgets/pet_img.dart';
 import 'package:pet_finder_app/features/home/ui/widgets/pet_info.dart';
 
 class PetCard extends StatelessWidget {
-  const PetCard({super.key});
-
+  const PetCard({super.key, required this.breedModel});
+  final BreedModel breedModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,12 +22,9 @@ class PetCard extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const PetImage(
-            imageUrl:
-                'https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=400',
-          ),
+          PetImage(breedModel: breedModel),
           SizedBox(width: 16.w),
-          const Expanded(child: PetInfo()),
+          Expanded(child: PetInfo(breedModel: breedModel)),
           const FavoriteButton(),
         ],
       ),

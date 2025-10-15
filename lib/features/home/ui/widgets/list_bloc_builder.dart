@@ -21,7 +21,9 @@ class ListBlocBuilder extends StatelessWidget {
             ),
           );
         } else if (state is HomeBreedSuccess) {
-          return const Expanded(child: PetList());
+          return  Expanded(child: PetList(
+            breedList: state.breedList,
+          ));
         }
 
         return const SizedBox.shrink();

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pet_finder_app/core/themes/app_styles.dart';
+import 'package:pet_finder_app/features/home/data/model/breed_model/breed_model.dart';
 
 class PetInfo extends StatelessWidget {
-  const PetInfo({super.key});
-
+  const PetInfo({super.key, required this.breedModel});
+  final BreedModel breedModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,20 +13,20 @@ class PetInfo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          // pet.name,
-          'Cat',
+          breedModel.name!,
+          // 'Cat',
           style: AppTextStyles.font18W700black,
         ),
         SizedBox(height: 4.h),
-        Text(
-          // pet.gender,
-          'Male',
-          style: AppTextStyles.font14W400gray,
-        ),
+        // Text(
+        //   // pet.gender,
+        //   'Male',
+        //   style: AppTextStyles.font14W400gray,
+        // ),
         SizedBox(height: 2.h),
         Text(
-          // pet.age,
-          '5 month',
+          "${breedModel.lifeSpan!} Months",
+          // '5 month',
           style: AppTextStyles.font14W400gray,
         ),
         SizedBox(height: 8.h),
@@ -38,8 +39,10 @@ class PetInfo extends StatelessWidget {
             ),
             SizedBox(width: 4.w),
             Text(
-              // pet.distance,
-              '1.5 km',
+              breedModel.origin!,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              // '1.5 km',
               style: AppTextStyles.font14W400gray,
             ),
           ],
