@@ -16,16 +16,16 @@ class PetImage extends StatelessWidget {
     return Container(
       width: 110.w,
       height: 110.h,
-      padding: EdgeInsets.all(10.w),
+      // padding: EdgeInsets.all(10.w),
       decoration: BoxDecoration(
         color: AppColors.mintGreen,
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: ClipRRect(
-        borderRadius: BorderRadiusGeometry.circular(10.r),
+        borderRadius: BorderRadiusGeometry.circular(12.r),
         child: Image.network(
           imgUrl,
-          
+
           width: double.infinity,
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) {
