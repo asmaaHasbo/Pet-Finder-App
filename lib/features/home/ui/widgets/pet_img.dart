@@ -13,7 +13,6 @@ class PetImage extends StatelessWidget {
     String imgUrl =
         'https://cdn2.thecatapi.com/images/${breedModel.referenceImageId}.jpg';
 
-    log(imgUrl);
     return Container(
       width: 110.w,
       height: 110.h,

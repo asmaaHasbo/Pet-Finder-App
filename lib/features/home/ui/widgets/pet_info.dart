@@ -12,21 +12,12 @@ class PetInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          breedModel.name!,
-          // 'Cat',
-          style: AppTextStyles.font18W700black,
-        ),
+        Text(breedModel.name!, style: AppTextStyles.font18W700black),
         SizedBox(height: 4.h),
-        // Text(
-        //   // pet.gender,
-        //   'Male',
-        //   style: AppTextStyles.font14W400gray,
-        // ),
+
         SizedBox(height: 2.h),
         Text(
           "${breedModel.lifeSpan!} Months",
-          // '5 month',
           style: AppTextStyles.font14W400gray,
         ),
         SizedBox(height: 8.h),
@@ -38,12 +29,15 @@ class PetInfo extends StatelessWidget {
               color: const Color(0xFFFF5252),
             ),
             SizedBox(width: 4.w),
-            Text(
-              breedModel.origin!,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              // '1.5 km',
-              style: AppTextStyles.font14W400gray,
+            SizedBox(
+              width: 130.w,
+              child: Text(
+                breedModel.origin!,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                // '1.5 km',
+                style: AppTextStyles.font14W400gray,
+              ),
             ),
           ],
         ),
