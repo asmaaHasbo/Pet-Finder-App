@@ -20,7 +20,7 @@ class DetalisHeader extends StatelessWidget {
               size: 30.sp,
             ),
           ),
-          Icon(Icons.favorite, color: AppColors.mainColor, size: 30.sp),
+          Icon(Icons.favorite, color: AppColors.mainColor, size: 50.sp),
         ],
       ),
     );

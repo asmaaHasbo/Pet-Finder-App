@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pet_finder_app/features/home/data/model/breed_model/breed_model.dart';
 
 class PetImg extends StatelessWidget {
-  const PetImg({super.key});
-
+  const PetImg({super.key, required this.breedModel});
+  final BreedModel breedModel;
   @override
   Widget build(BuildContext context) {
+    String imgUrl =
+        'https://cdn2.thecatapi.com/images/${breedModel.referenceImageId}.jpg';
+
     return Container(
-      // margin: EdgeInsets.symmetric(horizontal: 16.w),
       height: 350.h,
       decoration: BoxDecoration(
         color: const Color(0xFFD4E8EB),
@@ -17,7 +20,7 @@ class PetImg extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadiusGeometry.circular(10.r),
           child: Image.network(
-            'https://images.unsplash.com/photo-1505628346881-b72b27e84530?w=800',
+            imgUrl,
             height: double.infinity,
             fit: BoxFit.cover,
             width: double.infinity,
