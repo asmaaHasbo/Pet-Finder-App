@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_finder_app/core/routing/app_router.dart';
 import 'package:pet_finder_app/core/routing/routes.dart';
-import 'package:pet_finder_app/features/onboarding/onboarding_screen.dart';
-import 'package:pet_finder_app/features/pet_details/ui/pet_details.dart';
 
 class PetFinderApp extends StatelessWidget {
   const PetFinderApp({super.key});

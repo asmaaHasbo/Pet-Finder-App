@@ -82,7 +82,8 @@ dev_dependencies:
  
   #Code generation for immutable classes that has a simple syntax/API without compromising on the features.
   freezed: ^3.2.3
-
+  test: ^1.25.15
+  mockito: ^5.5.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
